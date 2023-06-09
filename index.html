@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atharva - Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 19);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(1, 1, 55);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(167, 167, 234);
+            font-size: 1.02rem;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 120px 0;
+            align-items: center;
+        }
+
+        .firstSection>div {
+            width: 30%;
+        }
+
+        .leftSection {
+            font-size: 2.5rem;
+
+        }
+
+        .leftSection .btn {
+            padding: 12px;
+            background-color: blueviolet;
+            color: white;
+            border: 2px solid white;
+            border-radius: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .leftSection .btn a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        button {
+            transition: transform 0.3s ease;
+        }
+
+        button:hover {
+            transform: scale(1.1);
+        }
+
+        button:active {
+            background-color: #555;
+        }
+
+        .leftSection .btn:hover {
+            transition: transform 0.3s;
+        }
+
+        .rightSection img {
+            width: 70%
+        }
+
+        .purple {
+            color: rgb(153, 70, 231);
+        }
+
+        #element {
+            color: rgb(153, 70, 231);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+        }
+
+        .secondSection h1 {
+            font-size: 1.6rem;
+            /* height: 80vh; */
+        }
+
+        .tgrey {
+            color: gray;
+        }
+
+        .secondSection .box {
+            background-color: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .fourSection {
+            max-width: 80vw;
+            margin: auto;
+            justify-content: space-evenly;
+        }
+
+        .fourSection h1 {
+            font-size: 1.6rem;
+            /* height: 80vh; */
+        }
+
+        .fourSection .box {
+            background-color: white;
+            width: 80vw;
+            height: 2px;
+            margin: 56px 0;
+            display: flex;
+        }
+
+        .fourSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 100px;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 0 100px;
+        }
+
+        main hr {
+            border: 0;
+            height: 2px;
+            margin: 40px 84px;
+            background: rgb(153, 70, 231);
+            border-radius: 10px;
+        }
+
+        .image-top {
+            width: 30px;
+            position: relative;
+            top: -32px;
+            left: -9px;
+        }
+
+        .vertical-title {
+            position: relative;
+            top: 75px;
+            width: 250px;
+        }
+
+        .vertical-description {
+            color: gray;
+            position: relative;
+            width: 100px;
+            left: -100px;
+            top: 184px;
+        }
+
+        .project-table {
+            font-size: 1em;
+            margin-left: auto;
+        }
+
+        .project-table td {
+            padding: 20px;
+        }
+
+        .project-table td:nth-child(1) {
+            padding-right: 2px;
+        }
+
+        .project-table td:nth-child(2) {
+            width: 60%;
+        }
+
+        .project-title {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .project-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .skill-table {
+            font-size: 1em;
+            justify-content: space-evenly;
+            /* margin-left: auto; */
+        }
+
+        .skill-table td {
+            padding: 20px;
+            font-size: 1.3rem;
+        }
+
+        .skill-table td:nth-child(1) {
+            padding-right: 2px;
+        }
+
+        .skill-table td:nth-child(2) {
+            width: 60%;
+        }
+
+        .skill-title {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .skill-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .skillFont {
+            font-size: 1.6em;
+        }
+
+
+        .thirdSection {
+            position: relative;
+        }
+
+        .fourthSection {
+            position: relative;
+        }
+
+        .fourthSection tr {
+            height: 120px;
+        }
+
+        .thirdSection h1 {
+            margin-left: 150px;
+        }
+
+        .fourthSection h1 {
+            margin-left: 150px;
+        }
+
+        .thirdSection table {
+            margin: auto;
+        }
+
+        .fourthSection table {
+            margin: auto;
+        }
+
+        .thirdSection tr {
+            height: 120px;
+        }
+
+        .institute-name {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .year {
+            font-style: italic;
+        }
+
+        .educationFont {
+            font-size: 1.6em;
+        }
+
+
+
+        footer {
+            background-color: #002d43;
+            padding: 20px;
+            text-align: center;
+            display: flex;
+        }
+
+        footer table {
+            width: 100%;
+            margin: auto;
+        }
+
+        footer td {
+            text-align: center;
+            width: 25%;
+        }
+
+        .footer-img {
+            width: 40px;
+            transition: transform 0.3s;
+        }
+
+        .footer-img:hover {
+            transform: scale(1.2);
+        }
+
+        .my-img {
+            border-radius: 20%;
+
+            transition: transform 0.3s;
+        }
+        .my-img:hover {
+            transform: scale(1.1);
+        }
+
+    </style>
+</head>
+
+<body>
+    <header id="back">
+        <nav>
+            <div class="left">Atharva's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#proj">About</a></li>
+                    <li><a href="#contact">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, I am <span>Atharva</span>
+                🙂
+                <div> a passionate</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn"><a href="cv_updated.pdf" download>Download Resume</a></button>
+                </div>
+            </div>
+            <div class="rightSection">
+                <img src="me.jfif" class="my-img" alt="">
+            </div>
+        </section>
+
+        <hr>
+
+        <section class="secondSection">
+            <span class="tgrey">My current ventures...</span>
+            <h1 id="proj">Ongoing Projects</h1>
+            <table class="project-table">
+                <tr>
+                    <td><img class="project-image" src="ecg-monitor.gif"></img></td>
+                    <td>
+                        <span class="project-title">ECG Arrythmia Classification using Convolutional Neural
+                            Network</span><br>
+                        Automatic detection and classification of abnormal heart rhythms from electrocardiogram (ECG)
+                        data by using the Digital Signal Processing concept of Convolution along with a deep learning
+                        approach.<br>
+                        <b>Tools used:</b> Matlab
+                    </td>
+                </tr>
+                <tr>
+                    <td><img class="project-image" src="voip.gif"></img></td>
+                    <td>
+                        <span class="project-title">Simulation of a VoIP (Voice over Internet Protocol) model</span><br>
+                        Simulation of a VoIP based communication and networking model comprising VLANs, HTTP, DHCP,
+                        Subnets and DNS modules.<br>
+                        <b>Tools used:</b> Cisco Packet Tracer
+                    </td>
+                </tr>
+                <tr>
+                    <td><img class="project-image" src="line-chart.gif"></img></td>
+                    <td>
+                        <span class="project-title">Data analytics of Covid – 19 Vaccines</span><br>
+                        Analysis and visualization of the Covid – 19 vaccines utilized by the 10 most afflicted
+                        countries.<br>
+                        <b>Tools used:</b> R, MySQL
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <hr>
+
+        <section class="thirdSection">
+            <h1 class="educationFont">Education</h1>
+            <table>
+                <tr>
+                    <td>
+                        <span class="institute-name">Vellore Institute of Technology (Chennai)</span><br>
+                        BTech Electronics and Computer Engineering<br>
+                        <span class="year">2021 - Present</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="institute-name">ASM CSIT (Pune - Pimpri Chinchwad)</span><br>
+                        HSC board: 88.5%<br>
+                        <span class="year">2021</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="institute-name">St. Ursula High School (Pune - Pimpri Chinchwad)</span><br>
+                        SSC board: 92.2%<br>
+                        <span class="year">2019</span>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <hr>
+        <section class="fourSection">
+            <h1 id="skillSection">Skills</h1>
+            <table class="skill-table">
+                <tr>
+                    <td>
+                        <img class="skill-image" src="c.png"></img>
+                    </td>
+                    <td>
+                        ⭐⭐⭐⭐⭐
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="skill-image" src="c++.png"></img>
+                    </td>
+                    <td>
+                        ⭐⭐⭐⭐
+                    </td>
+                </tr>
+                <td>
+                    <img class="skill-image" src="java.png"></img>
+                </td>
+                <td>
+                    ⭐⭐⭐
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                        <img class="skill-image" src="r.jpg"></img>
+                    </td>
+                    <td>
+                        ⭐⭐⭐
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <table>
+            <tr>
+                <td><a href="https://www.linkedin.com/in/kulkarni-atharva-g/"><img src="linkedin.png"
+                            class='footer-img'></a><br>LinkedIn</td>
+                <td><a href="mailto:kulatharva1@gmail.com?"><img src="gmail.png" class='footer-img'></a><br>Email</td>
+                <td><a href="tel:+917720075540"><img src="whatsapp.png" class='footer-img'></a><br>WhatsApp</td>
+                <td><a href="https://www.instagram.com/atharvaaa.exe/"><img src="instagram.png"
+                            class='footer-img'></a><br>Instagram</td>
+            </tr>
+            <tr>
+                <td colspan="4"><a href="#back"><img src="up-arrow.png" class='footer-img'></a></td>
+            </tr>
+        </table>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Programmer', 'Web Designer', 'Guitarist 🎸', 'and much more....'],
+            typeSpeed: 20,
+        });
+    </script>
+</body>
+
+</html>
