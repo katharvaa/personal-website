@@ -227,6 +227,11 @@
             height: 100px;
             border-radius: 50%;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .project-image:hover {
+            transform: scale(1.2);
         }
 
         .skill-table {
@@ -258,6 +263,11 @@
             height: 50px;
             border-radius: 50%;
             box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+        .skill-image:hover {
+            transform:scale(1.2);
+
         }
 
         .skillFont {
@@ -267,10 +277,16 @@
 
         .thirdSection {
             position: relative;
+            display:flex;
+            justify-content:space-around;
         }
 
         .fourthSection {
             position: relative;
+            align-content: flex-end;
+            display:flex;
+            justify-content:space-around;
+            flex-direction: row;
         }
 
         .fourthSection tr {
@@ -345,6 +361,22 @@
         }
         .my-img:hover {
             transform: scale(1.1);
+        }
+        .img3{
+            height:400px;
+        }
+        .img4{
+            height:400px;
+            width:400px;
+        }
+        .grid-container{
+            margin-left:50px;
+            display:inline-grid;
+            grid-template-columns: auto auto;
+            grid-column-start: 1;
+            grid-column-end: 2;
+            column-gap: 420px;
+            row-gap:20px;
         }
 
     </style>
@@ -422,6 +454,8 @@
 
         <section class="thirdSection">
             <h1 class="educationFont">Education</h1>
+            <br>
+            <div class="img3"></div>
             <table>
                 <tr>
                     <td>
@@ -449,42 +483,21 @@
         <hr>
         <section class="fourSection">
             <h1 id="skillSection">Skills</h1>
-            <table class="skill-table">
-                <tr>
-                    <td>
-                        <img class="skill-image" src="c.png"></img>
-                    </td>
-                    <td>
-                        ⭐⭐⭐⭐⭐
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="skill-image" src="c++.png"></img>
-                    </td>
-                    <td>
-                        ⭐⭐⭐⭐
-                    </td>
-                </tr>
-                <td>
-                    <img class="skill-image" src="java.png"></img>
-                </td>
-                <td>
-                    ⭐⭐⭐
-                </td>
-                </tr>
-                <tr>
-                    <td>
-                        <img class="skill-image" src="r.jpg"></img>
-                    </td>
-                    <td>
-                        ⭐⭐⭐
-                    </td>
-                </tr>
-            </table>
+            <br>
+            <div class="grid-container">
+                <div class="grid-item"><img class="skill-image" src="c.png"></img></div>
+                <div class="grid-item">⭐⭐⭐⭐⭐</div>
+                <div class="grid-item"><img class="skill-image" src="c++.png"></img></div>
+                <div class="grid-item">⭐⭐⭐⭐</div>
+                <div class="grid-item"><img class="skill-image" src="java.png"></img></div>
+                <div class="grid-item">⭐⭐⭐</div>
+                <div class="grid-item"><img class="skill-image" src="r.jpg"></img></div>
+                <div class="grid-item">⭐⭐⭐</div>
+            </div>
         </section>
+        <br>
+        <br>
     </main>
-
     <footer id="contact">
         <table>
             <tr>
